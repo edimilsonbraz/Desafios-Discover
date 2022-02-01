@@ -51,7 +51,9 @@ body {
 }
 
 .content form {
+  position: relative;
   margin-bottom: 50px;
+  display: inline-block;
 }
 
 .content form label {
@@ -62,30 +64,30 @@ body {
   margin-bottom: 18px;
 }
 .content form input {
-  width: 798px;
-  height: 49px;
+  width: 980px;
+  height: 48px;
   outline: none;
+  border: none;
   border-left-color: 2px solid var(--title-color);
-  
 }
 .content form ::placeholder {
   padding: 12px;
 }
-.content form .form-position {
-  display: flex;
-  align-items: center;
+
+.content form .form-button button {
+  border: none;
+  position: absolute;
 }
-.content form img {
+.content form button img {
   width: 48px;
   height: 48px;
-  font-size: 5px;
-  color: #FFF;
-  background-color: var(--bg-button-color);
+  cursor: pointer;
 }
 
 .content .link {
   display: flex;
   align-items: center;
+  margin-top: 50px;
 }
 .content .link a {
   text-decoration: none;

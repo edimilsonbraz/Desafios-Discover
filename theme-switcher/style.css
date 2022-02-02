@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+	--primary-color: #F1F1F1;
+	--label: #111;
+}
+.dark {
+  --primary-color: #292C35;
+	--text-color: #FFF;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.container label {
+  position: relative;
+  background: var(--label); 
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+}
+.container label::before {
+  position: absolute;
+  content: '';
+  width: 80px;
+  height: 80px;
+  background-image: url(assets/moon.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.container label::after {
+  position: absolute;
+  right: 4px;
+  content: '';
+  width: 80px;
+  height: 80px;
+  background-image: url(assets/sun.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.container .estilo {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 102px;
+  background: var(--label);
+  border-radius: 50px;
+}
+
+
+/* Estilo da Bolinha */
+.estilo::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: #F1F1F1;
+  cursor: pointer;
+  z-index: 10;
+}
+
+
+.container h1 {
+  color: var(--text-color);
+  margin-top: 24px;
+  letter-spacing: 1px;
+}

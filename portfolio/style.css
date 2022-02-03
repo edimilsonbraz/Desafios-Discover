@@ -8,6 +8,7 @@
   --bg-body-color: #22212C;
   --bg-cards: #302F3D;
   --bg-techs: #CB92B1;
+  --title-color: #BEB9D9;
   --text-color: #837E9F;
   --border: #00FF00;
 }
@@ -25,7 +26,10 @@ body {
   'navigation main'
   'footer footer';
 }
-
+h1 {
+  color: var(--title-color);
+  letter-spacing: 1px;
+}
 /* ======= ASSIDE ======= */
 aside {
   margin: 40px 0 0 40px;
@@ -35,17 +39,19 @@ aside {
 }
 .navigation-aside .card {
   width: 348px;
-  height: 292px;
-
+  color: var(--text-color);
+  border-radius: 20px;
+  background-color: var(--bg-cards);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+.navigation-aside .perfil {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--text-color);
-  border-radius: 20px;
-  background-color: var(--bg-cardsr);
 }
-.navigation-aside .card img {
+.navigation-aside .card .foto-perfil {
   width: 128px;
   height: 128px;
   border-radius: 50%;
@@ -53,11 +59,93 @@ aside {
   margin-bottom: 30px;
   object-fit: cover;
 }
-.navigation-aside .card h1 {
+.navigation-aside .perfil h1 {
+  color: var(--title-color);
   margin-bottom: 10px;
+}
+.navigation-aside .perfil p {
+  font-weight: 100;
+}
+
+/* =====SOCIAL MEDIAS ====== */
+.navigation-aside .social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 18px;
+}
+.navigation-aside .social-media .social-media-icons {
+  display: flex;
+  align-items: center;
+}
+.navigation-aside .social-media .social-media-icons img {
+  margin-right: 20px;
+  color: var(--title-color);
+}
+.navigation-aside .social-media .social-media-icons a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* =====TECNOLOGIAS ====== */
+.tecnologias h1 {
+  text-transform: uppercase;
+}
+.tecnologias .techs ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.tecnologias .techs ul li {
+  color: #111111;
+  font-size: 0.625rem;
+  font-weight: bold;
+  background-color: var(--bg-techs);
+  width: 86px;
+  height: 24px;
+  border-radius: 20px;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  transition: all 0.4s;
+}
+.tecnologias .techs ul li:hover {
+  filter: brightness(1.2);
+}
+
+/* ===== EXPERIENCIA ====== */
+.experiencia h1 {
+  text-transform: uppercase;
+}
+.experiencia ul {
+  padding: 20px;
+}
+.experiencia ul li {
+  margin-bottom: 12px;
+}
+.experiencia ul li h2 {
+  font-size: 1rem;
+  
+}
+.experiencia ul li p {
+  font-size: 0.875rem;
+  opacity: 0.5;
+}
+.experiencia ul li span {
+  font-weight: 100;
+  font-size: 0.875rem;
+
 }
 
 
+
+/*====== MAIN =====*/
 main {
   border: 1px solid var(--border);
   margin: 40px 40px 0 0;
@@ -67,6 +155,10 @@ main {
 }
 
 
+
+
+
+/*====== FOOTER =====*/
 footer {
   border: 1px solid var(--border);
   width: 100%;

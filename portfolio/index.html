@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="style.css">
   <title>Portfolio</title>
 </head>
-<body>
+<body class="container">
   <aside class="navigation-aside">
     <section class="card perfil">
       <img class="foto-perfil" src="assets/eu.jpg" alt="foto">
@@ -97,65 +97,100 @@
   </aside>
 
   <main class="main-content">
-    <section class="">
-      <div class="my-projects">
+    <section class="my-projects">
+      <div class="my-projects-title">
         <h1>My Projects</h1>
         <a href="#">Ver todos</a>
       </div>
+
+      <div class="projects-pinned">
+        <div class="card projects-pinned-card">
+          <div class="folder">
+            <img src="assets/folder.svg" alt="folder">
+            <a href="#">
+              <h2>api-axios</h2>
+            </a>
+          </div>
+          <p>Requisições podem ser feitas passando as configs relevantes para o axios.</p>
+          
+          <div class="projects-pinned-card-icons">
+            <div class="icons">
+              <img src="assets/star.svg" alt="star">
+              <span>100</span>
+              <img src="assets/git-branch.svg" alt="branch">
+              <span>100</span>
+            </div>
+            <div class="language">
+              <p>Javascript</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card projects-pinned-card">
+          <div class="folder">
+            <img src="assets/folder.svg" alt="folder">
+            <a href="#">
+              <h2>api-axios</h2>
+            </a>
+          </div>
+          <p>Requisições podem ser feitas passando as configs relevantes para o axios.</p>
+  
+          <div class="projects-pinned-card-icons">
+            <div class="icons">
+              <img src="assets/star.svg" alt="star">
+              <span>100</span>
+              <img src="assets/git-branch.svg" alt="branch">
+              <span>100</span>
+            </div>
+            
+            <div class="language">
+              <p>Javascript</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="projects-pinned">
-      <div class="card projects-pinned-card">
-        <div class="folder">
-          <img src="assets/folder.svg" alt="folder">
-          <h2>api-axios</h2>
-        </div>
-        <p>Requisições podem ser feitas passando as configs relevantes para o axios.</p>
-        
-        <div class="projects-pinned-card-icons">
-          <div>
-            <img src="assets/star.svg" alt="star">
-            <span>100</span>
+    
+
+    <section class="posts">
+      <div class="card">
+        <H1>Recent Posts</H1>
+      </div>
+
+      <div class="card post">
+        <div class="post-info">
+          <div class="post-info-img">
+            <img src="assets/eu.jpg" alt="foto perfil">
           </div>
-          <div>
-            <img src="assets/git-branch.svg" alt="branch">
-            <span>100</span>
-          </div>
-          <div class="language">
-            <span></span>
-            <p>Javascript</p>
+          <div class="post-info-text">
+            <a href="#">
+              <h2>Mini projetos em Javascript</h2>
+            </a>
+            <span>2 dias atrás</span>
+
+            <p>Erro ao conectar no db postgres</p>
+
+            <div class="post-info-hastag">
+              <span>#html</span>
+              <span>#css</span>
+              <span>#javascript</span>
+              <span>#nodejs</span>
+            </div>
           </div>
           
         </div>
-      </div>
-      <div class="card projects-pinned-card">
-        <div class="folder">
-          <img src="assets/folder.svg" alt="folder">
-          <h2>api-axios</h2>
-        </div>
-        <p>Requisições podem ser feitas passando as configs relevantes para o axios.</p>
 
-        <div class="projects-pinned-card-icons">
-          <div>
-            <img src="assets/star.svg" alt="star">
-            <span>100</span>
-          </div>
-          <div>
-            <img src="assets/git-branch.svg" alt="branch">
-            <span>100</span>
-          </div>
-          <div class="language">
-            <p>Javascript</p>
-            <span></span>
-          </div>
-        </div>
+       
       </div>
-
     </section>
+
   </main>
 
 
-  <footer class="footer"></footer>
+  <footer class="footer">
+    <p>Feito com 💜 por<strong> Edimilson Braz | 2022</strong></p> 
+  </footer>
 
 </body>
 </html>

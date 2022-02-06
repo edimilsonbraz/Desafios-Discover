@@ -287,3 +287,19 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 425px) {
+  body {
+    display: flex;
+  }
+  .container {
+    width: auto;
+  }
+  .navigation-aside .perfil {
+    flex-direction: row;
+  }
+  
+}

@@ -296,7 +296,7 @@ footer {
     display: flex;
   }
   .container {
-    width: auto;
+    width: 425px;;
   }
   .navigation-aside .perfil {
     flex-direction: row;

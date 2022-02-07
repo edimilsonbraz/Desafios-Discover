@@ -293,13 +293,49 @@ footer {
 /* ========== RESPONSIVIDADE ========== */
 @media (max-width: 425px) {
   body {
-    display: flex;
+    gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      'navigation'
+      'main'
+      'footer'
+    ;
+  }
+  aside {
+    margin-top: 15x;
+    margin-left: 15px;
   }
   .container {
-    width: 425px;;
+    width: calc(425px - 40px);
   }
   .navigation-aside .perfil {
     flex-direction: row;
   }
-  
+  .card {
+    width: calc(425px - 40px);
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  .navigation-aside .perfil {
+    width: calc(425px - 40px);
+    display: inline-block;
+    text-align: center;
+  }
+
+  main {
+    margin: 20px;
+  }
+  .main-content  {
+    width: 425px;
+  }
+  .my-projects-title {
+    width: calc(425px - 40px);
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .projects-pinned {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 }

@@ -1,7 +1,7 @@
 <h1 align="center">
   <p>
       <a target="_blank" rel="noopener noreferrer" href="">
-        <img src="./assets/portfolio-github.png" alt="Portfolio" height="450px" style="max-width:100%;">
+        <img src="./assets/portfolio-github.png" alt="Portfolio" height="450px" width="900px;">
       </a>
   </P>
 

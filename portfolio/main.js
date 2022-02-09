@@ -16,6 +16,8 @@ function getGitHubProfile() {
     })
 }
 
+const userRepos = document.querySelectorAll('#userRepos')
+const language = document.querySelectorAll('#userLanguage')
 
 function getGitHubRepositorios() {
   const projects = 'https://api.github.com/users/edimilsonbraz/repos';
@@ -24,17 +26,18 @@ function getGitHubRepositorios() {
   .then((response) => response.json())
   .then(data => {
     const repoAll = data.length
-    console.log(repoAll)
     for(let i = 0; i <= repoAll; i++) {
 
-      alert(data[i].name)
+      // alert(data[i].name)
+      userRepos.textContent = data[i].name;
+      language.textContent = data[i].language;
+      // userDescriptRepos.textContent = data[i].description;
     }
-    // userRepos.textContent = data[1].name;
   })
 
 
 }
 
 
-// getGitHubProfile()
-// getGitHubRepositorios()
+getGitHubProfile()
+getGitHubRepositorios()

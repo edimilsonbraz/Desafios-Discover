@@ -39,19 +39,24 @@ body {
  margin-bottom: 30px;
 }
 .content .contentImg {
-  padding: 18px;
-  margin-right: 34px;
+  margin-right: 20px;
 }
 .content .content-text {
-  padding: 18px;
+  width: 500px;
+  padding-left: 16px;
+  padding-right: 16px;
+
 }
 .content .content-text h1 {
-  font-size: 1.25rem;
+
+  color: #4268c0;
+  font-size: 1.5rem;
   margin-bottom: 20px;
   text-align: left;
 }
 .content .content-text p {
   text-align: left;
+  line-height: 1.8;
 }
 .button {
   margin-bottom: 30px;

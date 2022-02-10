@@ -4,12 +4,19 @@ import {
   language,
 } from './api.js'
 
-const url = `${BASE_URL}550?api_key=${API_KEY}`
+const url = `${BASE_URL}550?api_key=${API_KEY}&${language}`
+const urlImage = `${IMG_URL}`
+const img = document.querySelector('.content img')
 
-fetch(url)
-.then((response) => response.json())
-.then(data => {
-  contentImg.textContent = data.poster_path
-  titleMovie.textContent = data.original_title
-  textMovie.textContent = data.overview
-})
+function getMoviesApi() {
+  fetch(url)
+  .then((response) => response.json())
+  .then(data => {
+    titleMovie.textContent = data.original_title
+    textMovie.textContent = data.overview
+    
+    img.setAttribute('src',`${urlImage}` + data.poster_path)
+  })
+}
+
+getMoviesApi()

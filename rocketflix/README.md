@@ -1,7 +1,7 @@
 <h1 align="center">
   <p>
       <a target="_blank" rel="noopener noreferrer" href="">
-        <img src="./assets/rocketflix-1.gif" alt="RECEITA WAFFE CLÁSSICO" height="450px" style="max-width:100%;">
+        <img src="./assets/rocketflix-1.gif" alt="ROCKET FLIX" height="450px" style="max-width:100%;">
       </a>
   </P>
 

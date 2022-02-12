@@ -21,7 +21,7 @@ function getMoviesApi() {
     img.setAttribute('src',`${urlImage}` + result.poster_path)
     titleMovie.textContent = result.title
     textMovie.textContent = result.overview
-    yearMovie.textContent = 'Ano: '+result.release_date
+    yearMovie.textContent = 'Ano: '+result.release_date.slice(0, 4)
     popularityMovie.textContent = 'Popularidade: '+result.popularity+' ⭐'
   })
 }

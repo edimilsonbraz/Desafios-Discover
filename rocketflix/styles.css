@@ -37,6 +37,8 @@ body {
 .content {
  display: flex;
  margin-bottom: 30px;
+ text-align: left;
+
 }
 .content .contentImg {
   margin-right: 20px;
@@ -50,11 +52,15 @@ body {
   color: #4268c0;
   font-size: 1.5rem;
   margin-bottom: 20px;
-  text-align: left;
 }
 .content .content-text p {
-  text-align: left;
   line-height: 1.8;
+  margin-bottom: 12px;
+}
+.content .content-text span {
+  color: #4268c0;
+  display: block;
+  margin-bottom: 12px;
 }
 .button {
   margin-bottom: 30px;

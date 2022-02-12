@@ -4,8 +4,7 @@ import {
   language,
 } from './api.js'
 
-// const url = `${BASE_URL}550?api_key=${API_KEY}&${language}`
-const url = 'https://api.themoviedb.org/3/search/movie?api_key=f4c42d7f1d3d45b8375f9d29e4c9afbc&query=action'
+const url = `${BASE_URL}api_key=${API_KEY}&query=action&${language}`
 const img = document.querySelector('.content img')
 const button = document.querySelector('.btn')
 const urlImage = `${IMG_URL}`
@@ -19,9 +18,11 @@ const newData = data.results
 function getMoviesApi() {
   newData.push(newData.splice(0,1)[0]); //muda a posição do index do array
   newData.forEach(result => {
+    img.setAttribute('src',`${urlImage}` + result.poster_path)
     titleMovie.textContent = result.title
     textMovie.textContent = result.overview
-    img.setAttribute('src',`${urlImage}` + result.poster_path)
+    yearMovie.textContent = 'Ano: '+result.release_date
+    popularityMovie.textContent = 'Popularidade: '+result.popularity+' ⭐'
   })
 }
 

@@ -4,7 +4,7 @@ import {
   language,
 } from './api.js'
 
-const url = `${BASE_URL}api_key=${API_KEY}&query=action&${language}`
+const url = `${BASE_URL}api_key=${API_KEY}&query=all&${language}`
 const img = document.querySelector('.content img')
 const button = document.querySelector('.btn')
 const urlImage = `${IMG_URL}`

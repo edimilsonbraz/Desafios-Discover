@@ -16,6 +16,13 @@ const countdown = () => {
   let textMinute = Math.floor((diferenceTimer % hour) / minute);   
   let textSecond = Math.floor((diferenceTimer % minute) / second);   
 
+  //Acrescentando os "0"
+  textDay = textDay < 10 ? '0' + textDay : textDay;
+  textHour = textHour < 10 ? '0' + textHour : textHour;
+  textMinute = textMinute < 10 ? '0' + textMinute : textMinute;
+  textSecond = textSecond < 10 ? '0' + textSecond : textSecond;
+
+
   document.getElementById("days").innerText = textDay
   document.getElementById("hours").innerText = textHour
   document.getElementById("minutes").innerText = textMinute

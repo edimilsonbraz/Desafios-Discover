@@ -1,6 +1,7 @@
 # Desafios-Discover
-1 - 
-2 - 
-3 - 
-4 - 
-5 - 
+## 1 - Site de Receitas
+## 2 - Theme Switcher
+## 3 - Rocket News
+## 4 - Portfólio
+## 5 - Rocketflix
+## 6 - CountDown

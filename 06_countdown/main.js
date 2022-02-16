@@ -1,34 +1,35 @@
-const countdown = () => {
-  const countDate = new Date("Feb 26 2022 00:00:00").getTime()
-  const nowTimer = new Date()
-  const diferenceTimer = countDate - nowTimer
+//Pegar os elementos na DOM
+const daysEl = document.getElementById("days")
+const hoursEl = document.getElementById("hours")
+const minutesEl = document.getElementById("minutes")
+const secondsEl = document.getElementById("seconds")
 
-  //TEMPO em Segundos
-  let second = 1000;
-  let minute = second * 60;
-  let hour = minute * 60;
-  let day = hour * 24;
-  
-  
-  //Calculando o tempo
-  let textDay = Math.floor(diferenceTimer / day);   
-  let textHour = Math.floor((diferenceTimer % day) / hour);   
-  let textMinute = Math.floor((diferenceTimer % hour) / minute);   
-  let textSecond = Math.floor((diferenceTimer % minute) / second);   
+//Data do evento
+const countDate = "26 Feb 2023";
 
-  //Acrescentando os "0"
-  textDay = textDay < 10 ? '0' + textDay : textDay;
-  textHour = textHour < 10 ? '0' + textHour : textHour;
-  textMinute = textMinute < 10 ? '0' + textMinute : textMinute;
-  textSecond = textSecond < 10 ? '0' + textSecond : textSecond;
+function countDown() {
+  const DateEvent = new Date(countDate) //data do evento no formato 
+  const currentDate = new Date(); //data atual
 
+  const totalSeconds = (DateEvent - currentDate) / 1000; //Total em segundos
 
-  document.getElementById("days").innerText = textDay
-  document.getElementById("hours").innerText = textHour
-  document.getElementById("minutes").innerText = textMinute
-  document.getElementById("seconds").innerText = textSecond
+  const days = Math.floor(totalSeconds / 3600 / 24);
+  const hours = Math.floor(totalSeconds / 3600) % 24;
+  const minutes = Math.floor(totalSeconds / 60) % 60;
+  const seconds = Math.floor(totalSeconds) % 60;
+
+  daysEl.innerHTML = formatTime(days)
+  hoursEl.innerHTML = formatTime(hours)
+  minutesEl.innerHTML = formatTime(minutes)
+  secondsEl.innerHTML = formatTime(seconds) 
 
 }
 
-setInterval(countdown, 1000);
+//Acrescenta um 0 quando num menor que 10
+function formatTime(time) {
+  return time < 10 ? `0${time}` : time;
+}
+countDown();
+
+setInterval(countDown, 1000);
 

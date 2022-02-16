@@ -1,0 +1,23 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --body-bg-color: #dce4e3;
+  --green: #18c29c;
+  --light-green: #8ed7c6;
+	--light-grey: #dce4e3;
+  --text-color: #084236;
+}
+
+.sidebar {
+  max-width: 250px;
+  height: 100vh;
+  background-color: var(--green);
+  padding: 16px;
+}
+.sidebar li {
+  list-style: none;
+}

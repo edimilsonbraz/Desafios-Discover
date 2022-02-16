@@ -33,3 +33,11 @@ countDown();
 
 setInterval(countDown, 1000);
 
+/*==================================================*/ 
+
+// MODAL
+const Modal = {
+  openClose() {
+    document.querySelector('.modal-overlay').classList.toggle('active')
+  }
+}

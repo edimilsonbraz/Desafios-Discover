@@ -42,7 +42,7 @@
         </div>
         <div class="button">
           <p>Inscreva-se para saber mais sobre o lançamento</p>
-          <button>Inscreva-se</button>
+          <button onclick="Modal.openClose()">Inscreva-se</button>
         </div>
       </div>
       <div class="content-img">
@@ -50,6 +50,34 @@
       </div>
 
     </div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay">
+      <div class="modal">
+        <div class="form">
+          <h2>Inscreva-se</h2>
+          <form action="">
+            <div class="input-group">
+              <div class="inputbox">
+                <label for="name">Nome</label>
+                <input type="text" placeholder="Nome">
+              </div>
+              <div class="inputbox">
+                <label for="email">E-mail</label>
+                <input type="text" placeholder="exemple@email.com">
+              </div>
+            </div>
+
+            <div class="input-group actions">
+              <button type="cancel" onclick="Modal.openClose()" class="button">Cancelar</button>
+              <button type="submit" class="button">Enviar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  <!--FIM CONTAINER  -->
   </div>
 
   <script src="main.js"></script>

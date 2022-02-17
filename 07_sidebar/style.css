@@ -13,11 +13,16 @@
   color: var(--text-color);
 }
 body {
-  display: flex;
+  height: 100vh;
+  background-color: var(--body-bg-color);
+  
 }
 .sidebar {
-  width: 270px;
-  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
   background-color: var(--green);
   padding: 16px;
 }
@@ -28,41 +33,71 @@ body {
   margin-top: 10px;
 }
 
+.sidebar .nav-content {
+  height: calc(100% - 21px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .sidebar .nav-menu {
   margin-top: 28px;
 }
 .sidebar .nav-menu li {
+  height: 50px;
   list-style: none;
-  margin-bottom: 34px;
-  padding: 18px;
-
+  margin-top: 10px;
 }
-.sidebar .nav-menu li:hover {
-  padding: 18px;
+.sidebar .nav-menu .search-box {
   background-color: var(--light-grey);
 }
-.sidebar .nav-menu li a{
+.sidebar .nav-menu .search-box input {
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-grey);
+  outline: none;
+  border: none;
+  border-radius: 8px;
+}
+.sidebar .nav-menu li a,
+.search-box {
+  height: 100%;
   display: flex;
   align-items: center;
   gap: 16px;
   text-decoration: none;
-
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.3s;
 }
+.sidebar .nav-menu li a:hover {
+  background-color: var(--light-grey);
+}
+
 .sidebar .nav-menu li span {
   font-size: 1rem;
 }
 
 
+/* CONTENT BOTTON */
+.botton-content li {
+  list-style: none;
+  display: flex;
+  background-color: var(--light-grey);
+  padding: 0;
+}
 
-
-.nav-botton .perfil {
+.botton-content li a h3 {
+  display: block;
+}
+.botton-content .perfil {
+  object-fit: cover;
   width: 45px;
   height: 45px;
   border-radius: 12px;
 }
 
 
-.dashboard {
-  width: 100%;
-  background-color: var(--body-bg-color);
-}
+
+
+/* DASHBOARD */

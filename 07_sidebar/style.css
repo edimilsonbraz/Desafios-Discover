@@ -12,10 +12,15 @@
   box-sizing: border-box;
   color: var(--text-color);
 }
+ul, li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
 body {
   height: 100vh;
   background-color: var(--body-bg-color);
-  
 }
 .sidebar {
   position: fixed;
@@ -24,28 +29,45 @@ body {
   width: 250px;
   height: 100%;
   background-color: var(--green);
-  padding: 16px;
+  transition: all 0.3s;
+  z-index: 100;
+}
+.toggle {
+  width: 88px;
+}
+.toggle .text,
+.toggle .logo{
+  opacity: 0;
+}
+.sidebar .text {
+  transition: all 0.3s;
 }
 .sidebar .header {
   display: flex;
   justify-content: space-between;
-
+  padding: 16px;
   margin-top: 10px;
+}
+.toggle .menu {
+ position: absolute;
+ right: 30px;
+}
+.sidebar .header .menu {
+  cursor: pointer;
 }
 
 .sidebar .nav-content {
-  height: calc(100% - 21px);
+  height: calc(100% - 68px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .sidebar .nav-menu {
-  margin-top: 28px;
+  padding: 16px;
 }
 .sidebar .nav-menu li {
   height: 50px;
-  list-style: none;
   margin-top: 10px;
 }
 .sidebar .nav-menu .search-box {
@@ -65,7 +87,6 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
-  text-decoration: none;
   border-radius: 8px;
   padding: 12px;
   transition: all 0.3s;
@@ -80,24 +101,68 @@ body {
 
 
 /* CONTENT BOTTON */
-.botton-content li {
-  list-style: none;
+.botton-content .logoff {
+  height: 60px;
+  width: 98%;
+  margin: 0 auto;
   display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
   background-color: var(--light-grey);
-  padding: 0;
+  padding: 8px;
+  transition: all 0.3s ease-in-out;
+
 }
 
-.botton-content li a h3 {
-  display: block;
-}
 .botton-content .perfil {
   object-fit: cover;
   width: 45px;
   height: 45px;
   border-radius: 12px;
 }
+.botton-content .description h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: -6px;
+}
+
+.botton-content .description span {
+  font-size: 0.875rem;
+}
+.botton-content li img.logout {
+  width: 24px;
+  height: 24px;
+}
+
+.toggle .logout {
+  position: absolute;
+  right: 8px;
+  
+}
+
+/* DARK MODE */
+.botton-content .mode {
+  position: relative;
+}
 
 
 
+/* HOME */
+.home {
+  position: relative;
+  left: 250px;
+  height: 100vh;
+  width: calc(100% - 250px);
+  background: var(--body-bg-color);
+  transition: all 0.3s ease-in-out;
 
-/* DASHBOARD */
+}
+.home h1 {
+  font-size: 2.5rem;
+  padding: 8px 40px;
+}
+.toggle ~ .home {
+  left: 88px;
+  width: calc(100% - 88px);
+}

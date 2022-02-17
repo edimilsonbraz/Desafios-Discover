@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Boxicons CSS -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>  
   <!-- FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,64 +19,77 @@
 <body>
   <nav class="sidebar">
     <div class="header">
-      <img src="assets/logo.svg" alt="logo">
-      <img src="assets/menu.svg" alt="menu">
+      <img class="logo" src="assets/logo.svg" alt="logo">
+      <img class="menu" src="assets/menu.svg" alt="menu">
     </div>
     <div class="nav-content">
-      <ul class="nav-menu">
-        <li class="search-box">
-          <img src="assets/search.svg" alt="search">
-          <input type="search" placeholder="Buscar...">
-        </li>
-        <li>
-          <a href="#">
-            <img src="assets/grid.svg" alt="grid">
-            <span>Dashboard</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="assets/pet.svg" alt="pet">
-            <span>Pats</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="assets/user.svg" alt="user">
-            <span>Clientes</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="assets/vet.svg" alt="vet">
-            <span>Vets</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="assets/settings.svg" alt="settings">
-            <span>Ajustes</span>
-          </a>
-        </li>
-      </ul>
-
+      <div class="menu-bar">
+        <ul class="nav-menu">
+          <li class="list-icons search-box">
+            <img src="assets/search.svg" alt="search">
+            <input type="search" placeholder="Buscar...">
+          </li>
+          <li class="list-icons">
+            <a href="#">
+              <img src="assets/grid.svg" alt="grid">
+              <span class="text">Dashboard</span>
+            </a>
+          </li class="list-icons">
+          <li class="list-icons">
+            <a href="#">
+              <img src="assets/pet.svg" alt="pet">
+              <span class="text">Pats</span>
+            </a>
+          </li>
+          <li class="list-icons">
+            <a href="#">
+              <img src="assets/user.svg" alt="user">
+              <span class="text">Clientes</span>
+            </a>
+          </li>
+          <li class="list-icons">
+            <a href="#">
+              <img src="assets/vet.svg" alt="vet">
+              <span class="text">Vets</span>
+            </a>
+          </li>
+          <li class="list-icons">
+            <a href="#">
+              <img src="assets/settings.svg" alt="settings">
+              <span class="text">Ajustes</span>
+            </a>
+          </li>
+        </ul>
+      </div>
       <div class="botton-content">
-        <li>
-          <img class="perfil" src="assets/photo.jpg" alt="photo">
-          <div class="description">
-            <h3>Eleanor Pena</h3>
-            <span>Veterinária</span>
+        <li class="mode">
+          <div class="moon-sun">
+            <i class="bx bx-moon icon moon"></i>
+            <i class="bx bx-sun icon sun"></i>
           </div>
-          <img src="assets/log-out.svg" alt="">
+          <span class="mode-text text">Dark Mode</span>
+
+          <div class="toggle-switch">
+            <span class="switch"></span>
+          </div>
+        </li>
+
+        <li class="logoff">
+          <img class="perfil text" src="assets/photo.jpg" alt="photo">
+          <div class="description">
+            <h3 class="text">Eleanor Pena</h3>
+            <span class="text">Veterinária</span>
+          </div>
+          <img class="logout" src="assets/log-out.svg" alt="">
         </li>
       </div>
     </div>
   </nav>
 
-  
-
-  <section class="dashboard">
-    <h1>Dashboard</h1>
+  <section class="home">
+    <div class="text">
+      <h1>Dashboard</h1>
+    </div>
   </section>
 </body>
 </html>

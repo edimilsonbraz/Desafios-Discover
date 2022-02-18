@@ -5,6 +5,7 @@
 	--light-grey: #dce4e3;
   --text-color: #084236;
 }
+/* RESET */
 * {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -18,10 +19,21 @@ ul, li {
 a {
   text-decoration: none;
 }
+
+
 body {
   height: 100vh;
   background-color: var(--body-bg-color);
+  transition: all 0.4s ease;
 }
+body.dark {
+  --body-bg-color: #18191A;
+  --green: #242526;
+  --light-green: #8ed7c6;
+  --text-color: #ccc;
+}
+
+
 .sidebar {
   position: fixed;
   top: 0;
@@ -81,6 +93,9 @@ body {
   border: none;
   border-radius: 8px;
 }
+.sidebar .nav-menu li img {
+  color: var(--light-grey);
+}
 .sidebar .nav-menu li a,
 .search-box {
   height: 100%;
@@ -98,7 +113,9 @@ body {
 .sidebar .nav-menu li span {
   font-size: 1rem;
 }
-
+.sidebar .nav-menu li span:hover {
+  color: #242526;
+}
 
 /* CONTENT BOTTON */
 .botton-content .logoff {
@@ -122,12 +139,14 @@ body {
   border-radius: 12px;
 }
 .botton-content .description h3 {
+  color: var(--green);
   font-size: 1rem;
   font-weight: 400;
   margin-bottom: -6px;
 }
 
 .botton-content .description span {
+  color: var(--green);
   font-size: 0.875rem;
 }
 .botton-content li img.logout {
@@ -144,9 +163,64 @@ body {
 /* DARK MODE */
 .botton-content .mode {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 98%;
+  margin: 0 auto 2px;
+  background-color: rgba(255, 255, 255, 0.164);
 }
+.botton-content .mode .moon-sun {
+  height: 50px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+}
+.botton-content .mode i {
+  position: absolute;
+}
+.botton-content .mode i.sun {
+  opacity: 0;
+}
+body.dark .botton-content .mode i.sun {
+  opacity: 1;
+}
+body.dark .botton-content .mode i.moon {
+  opacity: 0;
+}
+.botton-content .mode .toggle-switch {
+  position: absolute;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 60px;
+}
+.toggle-switch .switch {
+  position: relative;
+  height: 22px;
+  width: 44px;
+  border-radius: 25px;
+  background-color: var(--light-grey);
+  cursor: pointer;
 
-
+}
+.switch::before {
+  content: '';
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  background-color: var(--green);
+  transition: all 0.2s ease-in-out;
+}
+body.dark .switch::before {
+  left: 24px;
+}
 
 /* HOME */
 .home {
@@ -156,7 +230,6 @@ body {
   width: calc(100% - 250px);
   background: var(--body-bg-color);
   transition: all 0.3s ease-in-out;
-
 }
 .home h1 {
   font-size: 2.5rem;

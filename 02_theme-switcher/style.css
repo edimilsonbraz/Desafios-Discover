@@ -3,17 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root {
+body.light {
 	--primary-color: #F1F1F1;
 	--label: #111;
 }
-.dark {
+body.dark {
   --primary-color: #292C35;
 	--text-color: #FFF;
+  --label: #444444;
 }
 
 body {
   background-color: var(--primary-color);
+  transition: all 0.4s;
 }
 .container {
   height: 100vh;
@@ -80,4 +82,10 @@ body {
   color: var(--text-color);
   margin-top: 24px;
   letter-spacing: 1px;
+}
+
+#currentTheme {
+  color: var(--text-color);
+  font-size: 28px;
+  margin-top: 12px;
 }

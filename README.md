@@ -5,3 +5,5 @@
 ## 4 - Portfólio
 ## 5 - Rocketflix
 ## 6 - CountDown
+## 7 - Sidebar
+## 8 - Lista de Presença(React)

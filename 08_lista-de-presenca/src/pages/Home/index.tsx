@@ -1,32 +1,72 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './styles.css';
-import {Card} from '../../components/Card';
+import {Card, CardProps} from '../../components/Card';
 
 function Home() {
-  const [studentName, setStudentName] = useState();
+  //estado
+  //variavel com conteudo e uma funçao p/ atualizar a variavel
+  const [studentName, setStudentName] = useState("");
+  const [students, setStudents] = useState<CardProps[]>([]);
+  //variaveis dados da api
+  const [user, setUser] = useState({name: '', avatar:''})
+
+  //Função de adicionar estudante
+  function handleAddStudent() {
+    const newStudent = {
+      name: studentName,
+      time: new Date().toLocaleTimeString("pt-br", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      })
+    };
+
+    setStudents(prevState => [...prevState, newStudent]);
+  }
   
+  //O useEffect é executado automaticamente sempre que o componente é renderizado.
+  useEffect(()=> {
+    fetch("https://api.github.com/users/edimilsonbraz")
+      .then(response => response.json())
+      .then(data => {
+        setUser({
+          name: data.name,
+          avatar: data.avatar_url
+        })
+      })
+    // Os arrays definem quais os estados que o useEffect depende.
+  },[])
+
   return (
     <div className="container">
       <header>
-        <h1>Nome: {studentName}</h1>
+        <h1>Lista de Presença</h1>
         <div>
-          <strong>Edimilson</strong>
-          <img src="https://github.com/edimilsonbraz.png" alt="foto do perfil" />
+          <strong>{user.name}</strong>
+          <img src={user.avatar} alt="foto do perfil" />
         </div>
       </header>
       <input 
         id="name"
         type="text" 
         placeholder="Digite aqui o nome..."
-        onChange={e => setStudentName(e.target.value)}
+        onChange={event => setStudentName(event.target.value)}
       />
       <button 
-        type="button" > 
+        type="button" onClick={handleAddStudent}> 
           Adicionar
       </button>
 
-      <Card name="Elivelton" time="09:30:10"/>
-      <Card name="Aline Barros" time="09:35:05"/>
+      {
+        students.map(student => 
+          <Card 
+            key={student.time}
+            name={student.name} 
+            time={student.time}
+          />
+        )
+        
+      }
     </div>
   )
 }
